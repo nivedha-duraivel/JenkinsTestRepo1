@@ -4,12 +4,14 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                environment
-                {   
-                    Foo = 'foo'
-                }
+            script
+            {
+                def Foo = 'foo'
+                sh "echo ${Foo}"
+            }
+                
                 echo 'Hello World'
-                echo $Foo
+                
             }
         }
          stage('Build') {
