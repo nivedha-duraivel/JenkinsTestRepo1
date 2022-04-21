@@ -4,11 +4,6 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-            script
-            {
-                def Foo = 'foo'
-                sh "echo ${Foo}"
-            }
                 
                 echo 'Hello World'
                 
