@@ -4,7 +4,12 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+                environment
+                {   
+                    Foo = 'foo'
+                }
                 echo 'Hello World'
+                echo $Foo
             }
         }
          stage('Build') {
